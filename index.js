@@ -4,7 +4,7 @@
   } else if (typeof exports === 'object') {
     module.exports = client(require('popsicle'))
   } else {
-    root.Rest000WebhostClientApi = client(root.popsicle)
+    root.WebhostClient = client(root.popsicle)
   }
 })(this, function (popsicle) {
   var TEMPLATE_REGEXP = /\{([^\{\}]+)\}/g

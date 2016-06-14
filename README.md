@@ -1,14 +1,14 @@
-# REST 000webhost Client API
+# webhost-client
 
-Browser and node module for making API requests against [REST 000webhost Client API](https://localhost:3333).
+Browser and node module for making API requests against [webhost-client](https://localhost:3333).
 
 **Please note: This module uses [Popsicle](https://github.com/blakeembrey/popsicle) to make API requests. Promises must be supported or polyfilled on all target environments.**
 
 ## Installation
 
 ```
-npm install rest-000-webhost-client-api --save
-bower install rest-000-webhost-client-api --save
+npm install webhost-client --save
+bower install webhost-client --save
 ```
 
 ## Usage
@@ -16,18 +16,18 @@ bower install rest-000-webhost-client-api --save
 ### Node
 
 ```javascript
-var Rest000WebhostClientApi = require('rest-000-webhost-client-api');
+var WebhostClient = require('webhost-client');
 
-var client = new Rest000WebhostClientApi();
+var client = new WebhostClient();
 ```
 
 ### Browsers
 
 ```html
-<script src="rest-000-webhost-client-api/index.js"></script>
+<script src="webhost-client/index.js"></script>
 
 <script>
-  var client = new Rest000WebhostClientApi();
+  var client = new WebhostClient();
 </script>
 ```
 
@@ -36,7 +36,7 @@ var client = new Rest000WebhostClientApi();
 You can set options when you initialize a client or at any time with the `options` property. You may also override options for a single request by passing an object as the second argument of any request method. For example:
 
 ```javascript
-var client = new Rest000WebhostClientApi({ ... });
+var client = new WebhostClient({ ... });
 
 client.options = { ... };
 
@@ -53,7 +53,7 @@ client.resource('/').get(null, {
 You can override the base URI by setting the `baseUri` property, or initializing a client with a base URI. For example:
 
 ```javascript
-new Rest000WebhostClientApi({
+new WebhostClient({
   baseUri: 'https://example.com'
 });
 ```

@@ -22,7 +22,7 @@ npm install [git-url] --save
 npm link
 
 # Link in project to local module
-npm link rest-000-webhost-client-api
+npm link webhost-client
 ```
 
 **Note:** You should publish it before you use it publicly.
@@ -34,15 +34,15 @@ npm link rest-000-webhost-client-api
 npm publish
 
 # Install from npm
-npm install rest-000-webhost-client-api --save
+npm install webhost-client --save
 ```
 
 ## Bower
 
 ```bash
 # Register with bower
-bower register rest-000-webhost-client-api [git-url]
+bower register webhost-client [git-url]
 
 # Install from bower
-bower install rest-000-webhost-client-api --save
+bower install webhost-client --save
 ```

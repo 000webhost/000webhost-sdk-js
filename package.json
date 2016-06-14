@@ -1,6 +1,6 @@
 {
-  "name": "rest-000-webhost-client-api",
-  "version": "1.0.25",
+  "name": "webhost-client",
+  "version": "1.0.26",
   "description": "",
   "main": "index.js",
   "files": [
