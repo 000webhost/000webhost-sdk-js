@@ -1,6 +1,6 @@
 # webhost-client
 
-Browser and node module for making API requests against [webhost-client](https://localhost:3333).
+Browser and node module for making API requests against [webhost-client](https://hostinger-000-rest-mock.herokuapp.com).
 
 **Please note: This module uses [Popsicle](https://github.com/blakeembrey/popsicle) to make API requests. Promises must be supported or polyfilled on all target environments.**
 
@@ -78,6 +78,14 @@ All methods return a HTTP request instance of [Popsicle](https://github.com/blak
 var resource = client.resources.users.user_id(user_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
 Get user information
@@ -110,6 +118,14 @@ resource.get({ ... });
 
 Specify application status
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### POST
 
 Create new application
@@ -127,6 +143,10 @@ resource.post(null, { query: { ... } });
 * **app_name** _string_
 
 Specify name for application
+
+* **domain** _string_
+
+Specify domain for application
 
 * **type** _string, one of (php55, php70), default: php55_
 
@@ -148,6 +168,14 @@ Specify password for application
 var resource = client.resources.apps.app_id(app_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Delete application
@@ -159,6 +187,51 @@ resource.delete().then(function (res) { ... });
 ##### GET
 
 Get application information
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).reset
+
+```js
+var resource = client.resources.apps.app_id(app_id).reset;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Clean everything client has ever created, basically delete
+and recreate
+
+```js
+resource.post().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).files
+
+```js
+var resource = client.resources.apps.app_id(app_id).files;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get FTP details for application
 
 ```js
 resource.get().then(function (res) { ... });
@@ -190,39 +263,18 @@ Specify new FTP password
 
 Confirm new FTP password
 
-#### resources.apps.app_id(app_id).reset
-
-```js
-var resource = client.resources.apps.app_id(app_id).reset;
-```
-
-##### POST
-
-Clean everything client has ever created, basically delete
-and recreate
-
-```js
-resource.post().then(function (res) { ... });
-```
-
-#### resources.apps.app_id(app_id).files
-
-```js
-var resource = client.resources.apps.app_id(app_id).files;
-```
-
-##### GET
-
-Get FTP details for application
-
-```js
-resource.get().then(function (res) { ... });
-```
-
 #### resources.apps.app_id(app_id).databases
 
 ```js
 var resource = client.resources.apps.app_id(app_id).databases;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -275,6 +327,14 @@ Specify database permissions
 var resource = client.resources.apps.app_id(app_id).databases.database_id(database_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Delete database
@@ -289,18 +349,26 @@ resource.delete().then(function (res) { ... });
 var resource = client.resources.apps.app_id(app_id).databases.database_id(database_id).change-password;
 ```
 
-##### POST
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
 
 Change database password
 
 ```js
-resource.post().then(function (res) { ... });
+resource.patch().then(function (res) { ... });
 ```
 
 ##### Query Parameters
 
 ```javascript
-resource.post(null, { query: { ... } });
+resource.patch(null, { query: { ... } });
 ```
 
 * **password_new** _string_
@@ -317,9 +385,17 @@ Confirm new database password
 var resource = client.resources.apps.app_id(app_id).databases.database_id(database_id).usage;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
-Get database usage
+Get database usage over time
 
 ```js
 resource.get().then(function (res) { ... });
@@ -329,6 +405,14 @@ resource.get().then(function (res) { ... });
 
 ```js
 var resource = client.resources.apps.app_id(app_id).cronjobs;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -385,6 +469,14 @@ Cron weekday value
 var resource = client.resources.apps.app_id(app_id).cronjobs.cron_id(cron_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Delete cronjob
@@ -399,9 +491,17 @@ resource.delete().then(function (res) { ... });
 var resource = client.resources.apps.app_id(app_id).statistics.disk;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
-Get disk usage for application
+Get disk usage for application over time
 
 ```js
 resource.get().then(function (res) { ... });
@@ -413,9 +513,17 @@ resource.get().then(function (res) { ... });
 var resource = client.resources.apps.app_id(app_id).statistics.bandwidth;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
-Get bandwidth usage for application
+Get bandwidth usage for application over time
 
 ```js
 resource.get().then(function (res) { ... });
@@ -427,9 +535,17 @@ resource.get().then(function (res) { ... });
 var resource = client.resources.apps.app_id(app_id).statistics.inodes;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
-Get inodes usage for application
+Get inodes usage for application over time
 
 ```js
 resource.get().then(function (res) { ... });
@@ -441,9 +557,17 @@ resource.get().then(function (res) { ... });
 var resource = client.resources.apps.app_id(app_id).statistics.database;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
-Get all application databases usage
+Get all application databases usage over time
 
 ```js
 resource.get().then(function (res) { ... });
@@ -455,9 +579,17 @@ resource.get().then(function (res) { ... });
 var resource = client.resources.apps.app_id(app_id).statistics.requests;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
-Get requests list for application
+Get requests list for application over time
 
 ```js
 resource.get().then(function (res) { ... });
@@ -467,6 +599,14 @@ resource.get().then(function (res) { ... });
 
 ```js
 var resource = client.resources.apps.app_id(app_id).backend;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -489,6 +629,14 @@ resource.patch().then(function (res) { ... });
 
 ```js
 var resource = client.resources.apps.app_id(app_id).redirects;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -533,6 +681,14 @@ Specify redirect type
 var resource = client.resources.apps.app_id(app_id).redirects.redirect_id(redirect_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Delete redirect
@@ -545,6 +701,14 @@ resource.delete().then(function (res) { ... });
 
 ```js
 var resource = client.resources.apps.app_id(app_id).security.password-protected-directories;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -589,6 +753,14 @@ Specify auth user password
 var resource = client.resources.apps.app_id(app_id).security.password-protected-directories.dir_id(dir_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Delete password protected directory for application
@@ -601,6 +773,14 @@ resource.delete().then(function (res) { ... });
 
 ```js
 var resource = client.resources.apps.app_id(app_id).security.hotlink-protection;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -653,6 +833,14 @@ Allow direct requests
 var resource = client.resources.apps.app_id(app_id).security.hotlink-protection.hostlink_id(hostlink_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Delete hotlink protection
@@ -665,6 +853,14 @@ resource.delete().then(function (res) { ... });
 
 ```js
 var resource = client.resources.apps.app_id(app_id).security.ip.whitelist;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -701,6 +897,14 @@ Specify IP Address
 var resource = client.resources.apps.app_id(app_id).security.ip.whitelist.whitelist_id(whitelist_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Remove whitelisted IP
@@ -713,6 +917,14 @@ resource.delete().then(function (res) { ... });
 
 ```js
 var resource = client.resources.apps.app_id(app_id).security.ip.blacklist;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -749,6 +961,14 @@ Specify IP Address
 var resource = client.resources.apps.app_id(app_id).security.ip.blacklist.blacklist_id(blacklist_id);
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### DELETE
 
 Remove blacklisted IP
@@ -761,6 +981,14 @@ resource.delete().then(function (res) { ... });
 
 ```js
 var resource = client.resources.domains;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### GET
@@ -777,6 +1005,14 @@ resource.get().then(function (res) { ... });
 var resource = client.resources.domains.domain_id(domain_id).link;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### POST
 
 Link domain
@@ -789,6 +1025,14 @@ resource.post().then(function (res) { ... });
 
 ```js
 var resource = client.resources.domains.domain_id(domain_id).unlink;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
 ```
 
 ##### POST

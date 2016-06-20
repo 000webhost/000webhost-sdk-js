@@ -102,6 +102,9 @@
   }
 
 
+  Resource2.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource2.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -119,6 +122,9 @@
 
   Resource3.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource3.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
   Resource3.prototype.post = function (body, options) {
     return handleRequest(this._client, this._uri, 'POST', body, options)
@@ -138,14 +144,14 @@
   }
 
 
+  Resource4.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource4.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
   Resource4.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
-  }
-  Resource4.prototype.patch = function (body, options) {
-    return handleRequest(this._client, this._uri, 'PATCH', body, options)
   }
   function Resource5 (uri, client) {
     this._uri = uri
@@ -154,6 +160,9 @@
   }
 
 
+  Resource5.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource5.prototype.post = function (body, options) {
     return handleRequest(this._client, this._uri, 'POST', body, options)
   }
@@ -164,8 +173,14 @@
   }
 
 
+  Resource6.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource6.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource6.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
   }
   function Resource7 (uri, client) {
     this._uri = uri
@@ -179,6 +194,9 @@
     return new Resource8(uri, this._client)
   }
 
+  Resource7.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource7.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -194,6 +212,9 @@
   }
 
 
+  Resource8.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource8.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
@@ -204,8 +225,11 @@
   }
 
 
-  Resource9.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
+  Resource9.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource9.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
   }
   function Resource10 (uri, client) {
     this._uri = uri
@@ -214,6 +238,9 @@
   }
 
 
+  Resource10.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource10.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -229,6 +256,9 @@
     return new Resource12(uri, this._client)
   }
 
+  Resource11.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource11.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -242,6 +272,9 @@
   }
 
 
+  Resource12.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource12.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
@@ -264,6 +297,9 @@
   }
 
 
+  Resource14.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource14.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -274,6 +310,9 @@
   }
 
 
+  Resource15.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource15.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -284,6 +323,9 @@
   }
 
 
+  Resource16.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource16.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -294,6 +336,9 @@
   }
 
 
+  Resource17.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource17.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -304,6 +349,9 @@
   }
 
 
+  Resource18.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource18.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -314,6 +362,9 @@
   }
 
 
+  Resource19.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource19.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -332,6 +383,9 @@
     return new Resource21(uri, this._client)
   }
 
+  Resource20.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource20.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -345,6 +399,9 @@
   }
 
 
+  Resource21.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource21.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
@@ -370,6 +427,9 @@
     return new Resource24(uri, this._client)
   }
 
+  Resource23.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource23.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -383,6 +443,9 @@
   }
 
 
+  Resource24.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource24.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
@@ -398,6 +461,9 @@
     return new Resource26(uri, this._client)
   }
 
+  Resource25.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource25.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -411,6 +477,9 @@
   }
 
 
+  Resource26.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource26.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
@@ -435,6 +504,9 @@
     return new Resource29(uri, this._client)
   }
 
+  Resource28.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource28.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -448,6 +520,9 @@
   }
 
 
+  Resource29.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource29.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
@@ -463,6 +538,9 @@
     return new Resource31(uri, this._client)
   }
 
+  Resource30.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource30.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -476,6 +554,9 @@
   }
 
 
+  Resource31.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource31.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
@@ -491,6 +572,9 @@
     return new Resource33(uri, this._client)
   }
 
+  Resource32.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource32.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -510,6 +594,9 @@
   }
 
 
+  Resource34.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource34.prototype.post = function (body, options) {
     return handleRequest(this._client, this._uri, 'POST', body, options)
   }
@@ -520,6 +607,9 @@
   }
 
 
+  Resource35.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
   Resource35.prototype.post = function (body, options) {
     return handleRequest(this._client, this._uri, 'POST', body, options)
   }
@@ -617,7 +707,7 @@
 
   function Client (options) {
     this.options = extend({
-      baseUri: 'https://localhost:3333',
+      baseUri: 'https://hostinger-000-rest-mock.herokuapp.com',
       baseUriParameters: {}
     }, options)
 
