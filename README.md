@@ -94,15 +94,157 @@ Get user information
 resource.get().then(function (res) { ... });
 ```
 
+##### DELETE
+
+Delete user
+
+```js
+resource.delete().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).password
+
+```js
+var resource = client.resources.users.user_id(user_id).password;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Update user password
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Query Parameters
+
+```javascript
+resource.patch(null, { query: { ... } });
+```
+
+* **password_old** _string_
+
+Specify old password
+
+* **password_new** _string_
+
+Specify new password
+
+* **password_new_confirm** _string_
+
+Confirm new password
+
+#### resources.users.user_id(user_id).phone-number
+
+```js
+var resource = client.resources.users.user_id(user_id).phone-number;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Update user phone number
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Query Parameters
+
+```javascript
+resource.patch(null, { query: { ... } });
+```
+
+* **phone_number** _string_
+
+User phone number
+
+#### resources.users.user_id(user_id).email
+
+```js
+var resource = client.resources.users.user_id(user_id).email;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Update user email
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Query Parameters
+
+```javascript
+resource.patch(null, { query: { ... } });
+```
+
+* **email** _string_
+
+User email addresss
+
+#### resources.users.user_id(user_id).resend-confirmation
+
+```js
+var resource = client.resources.users.user_id(user_id).resend-confirmation;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Resend email confirmation
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.apps
 
 ```js
 var resource = client.resources.apps;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### GET
 
-Get application list
+Get list of apps
 
 ```js
 resource.get().then(function (res) { ... });
@@ -118,17 +260,9 @@ resource.get({ ... });
 
 Specify application status
 
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
 ##### POST
 
-Create new application
+Create new app
 
 ```js
 resource.post().then(function (res) { ... });
@@ -176,20 +310,21 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-##### DELETE
-
-Delete application
-
-```js
-resource.delete().then(function (res) { ... });
-```
-
 ##### GET
 
-Get application information
+Get the app
+with appId
 
 ```js
 resource.get().then(function (res) { ... });
+```
+
+##### DELETE
+
+Delete app
+
+```js
+resource.delete().then(function (res) { ... });
 ```
 
 #### resources.apps.app_id(app_id).reset
@@ -279,7 +414,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get databases list for application
+Get list of databases
 
 ```js
 resource.get().then(function (res) { ... });
@@ -287,7 +422,7 @@ resource.get().then(function (res) { ... });
 
 ##### POST
 
-Create new database
+Create new databasis
 
 ```js
 resource.post().then(function (res) { ... });
@@ -337,7 +472,7 @@ resource.options().then(function (res) { ... });
 
 ##### DELETE
 
-Delete database
+Delete databasis
 
 ```js
 resource.delete().then(function (res) { ... });
@@ -417,7 +552,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get crons list for application
+Get list of cronjobs
 
 ```js
 resource.get().then(function (res) { ... });
@@ -425,7 +560,7 @@ resource.get().then(function (res) { ... });
 
 ##### POST
 
-Create cronjob
+Create new cronjob
 
 ```js
 resource.post().then(function (res) { ... });
@@ -641,7 +776,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get redirects list
+Get list of redirects
 
 ```js
 resource.get().then(function (res) { ... });
@@ -649,7 +784,7 @@ resource.get().then(function (res) { ... });
 
 ##### POST
 
-Create redirect
+Create new redirect
 
 ```js
 resource.post().then(function (res) { ... });
@@ -713,7 +848,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get password protected directories list
+Get list of password-protected-directories
 
 ```js
 resource.get().then(function (res) { ... });
@@ -721,7 +856,7 @@ resource.get().then(function (res) { ... });
 
 ##### POST
 
-Create password protected directory for application
+Create new password-protected-directory
 
 ```js
 resource.post().then(function (res) { ... });
@@ -763,7 +898,7 @@ resource.options().then(function (res) { ... });
 
 ##### DELETE
 
-Delete password protected directory for application
+Delete password-protected-directory
 
 ```js
 resource.delete().then(function (res) { ... });
@@ -785,7 +920,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get hotlink protection information
+Get list of hotlink-protection
 
 ```js
 resource.get().then(function (res) { ... });
@@ -793,7 +928,7 @@ resource.get().then(function (res) { ... });
 
 ##### POST
 
-Enable hotlink protection
+Create new hotlink-protection
 
 ```js
 resource.post().then(function (res) { ... });
@@ -843,7 +978,7 @@ resource.options().then(function (res) { ... });
 
 ##### DELETE
 
-Delete hotlink protection
+Delete hotlink-protection
 
 ```js
 resource.delete().then(function (res) { ... });
@@ -865,7 +1000,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get whitelisted IPs list
+Get list of whitelist
 
 ```js
 resource.get().then(function (res) { ... });
@@ -873,7 +1008,7 @@ resource.get().then(function (res) { ... });
 
 ##### POST
 
-Whitelist IP
+Create new whitelist
 
 ```js
 resource.post().then(function (res) { ... });
@@ -907,7 +1042,7 @@ resource.options().then(function (res) { ... });
 
 ##### DELETE
 
-Remove whitelisted IP
+Delete whitelist
 
 ```js
 resource.delete().then(function (res) { ... });
@@ -929,7 +1064,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get blacklisted IPs list
+Get list of blacklist
 
 ```js
 resource.get().then(function (res) { ... });
@@ -937,7 +1072,7 @@ resource.get().then(function (res) { ... });
 
 ##### POST
 
-Blacklist IP
+Create new blacklist
 
 ```js
 resource.post().then(function (res) { ... });
@@ -971,7 +1106,7 @@ resource.options().then(function (res) { ... });
 
 ##### DELETE
 
-Remove blacklisted IP
+Delete blacklist
 
 ```js
 resource.delete().then(function (res) { ... });
