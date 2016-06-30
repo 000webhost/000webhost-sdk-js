@@ -102,6 +102,26 @@ Delete user
 resource.delete().then(function (res) { ... });
 ```
 
+##### PATCH
+
+Update user
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Query Parameters
+
+```javascript
+resource.patch(null, { query: { ... } });
+```
+
+* **name** _string_
+
+User's name
+
+* **country** _string_
+
 #### resources.users.user_id(user_id).password
 
 ```js

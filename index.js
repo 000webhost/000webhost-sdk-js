@@ -115,6 +115,9 @@
   Resource2.prototype.delete = function (body, options) {
     return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
+  Resource2.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  }
   function Resource3 (uri, client) {
     this._uri = uri
     this._client = client
