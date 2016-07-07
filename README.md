@@ -110,17 +110,31 @@ Update user
 resource.patch().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.patch(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "country": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    }
+  }
+}
 
-* **name** _string_
-
-User's name
-
-* **country** _string_
+```
 
 #### resources.users.user_id(user_id).password
 
@@ -144,23 +158,36 @@ Update user password
 resource.patch().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.patch(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "password_old": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    },
+    "password_new": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    },
+    "password_new_confirm": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    }
+  }
+}
 
-* **password_old** _string_
-
-Specify old password
-
-* **password_new** _string_
-
-Specify new password
-
-* **password_new_confirm** _string_
-
-Confirm new password
+```
 
 #### resources.users.user_id(user_id).phone-number
 
@@ -184,15 +211,27 @@ Update user phone number
 resource.patch().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.patch(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "phone_number": {
+      "type": "string",
+      "required": true,
+      "minLength": 6,
+      "pattern": "^(\\+?[0-9]*$)$"
+    }
+  }
+}
 
-* **phone_number** _string_
-
-User phone number
+```
 
 #### resources.users.user_id(user_id).email
 
@@ -216,15 +255,26 @@ Update user email
 resource.patch().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.patch(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "email": {
+      "type": "string",
+      "required": true,
+      "minLength": 4
+    }
+  }
+}
 
-* **email** _string_
-
-User email addresss
+```
 
 #### resources.users.user_id(user_id).resend-confirmation
 
@@ -246,6 +296,28 @@ Resend email confirmation
 
 ```js
 resource.post().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).steps
+
+```js
+var resource = client.resources.users.user_id(user_id).steps;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get user gamification progress
+
+```js
+resource.get().then(function (res) { ... });
 ```
 
 #### resources.apps
