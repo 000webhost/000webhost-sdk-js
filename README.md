@@ -442,6 +442,54 @@ and recreate
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).password
+
+```js
+var resource = client.resources.apps.app_id(app_id).password;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Update application password
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "user_password": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    },
+    "new_app_password": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    }
+  }
+}
+
+```
+
 #### resources.apps.app_id(app_id).files
 
 ```js
