@@ -1337,6 +1337,28 @@ Delete blacklist
 resource.delete().then(function (res) { ... });
 ```
 
+#### resources.types
+
+```js
+var resource = client.resources.types;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of available application types
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.domains
 
 ```js
