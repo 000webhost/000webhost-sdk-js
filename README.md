@@ -533,6 +533,91 @@ resource.patch().then(function (res) { ... });
 
 ```
 
+#### resources.apps.app_id(app_id).category
+
+```js
+var resource = client.resources.apps.app_id(app_id).category;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Change application's category
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "type": {
+      "category": "string",
+      "required": true,
+      "minLength": 3
+    }
+  }
+}
+
+```
+
+#### resources.apps.app_id(app_id).adult
+
+```js
+var resource = client.resources.apps.app_id(app_id).adult;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Change application's adult property
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "type": {
+      "adult": "boolean",
+      "required": true
+    }
+  }
+}
+
+```
+
 #### resources.apps.app_id(app_id).sendmail
 
 ```js
