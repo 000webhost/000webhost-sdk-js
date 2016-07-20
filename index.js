@@ -78,10 +78,9 @@
 
     this.users = new Resource1(uri + '/users', client)
     this.apps = new Resource8(uri + '/apps', client)
-    this.types = new Resource42(uri + '/types', client)
-    this.categories = new Resource43(uri + '/categories', client)
-    this.domains = new Resource44(uri + '/domains', client)
-    this.zyro = new Resource48(uri + '/zyro', client)
+    this.types = new Resource43(uri + '/types', client)
+    this.categories = new Resource44(uri + '/categories', client)
+    this.zyro = new Resource45(uri + '/zyro', client)
   }
 
 
@@ -224,6 +223,7 @@
     this.backend = new Resource29(uri + '/backend', client)
     this.redirects = new Resource30(uri + '/redirects', client)
     this.security = new Resource32(uri + '/security', client)
+    this.domain = new Resource42(uri + '/domain', client)
   }
 
 
@@ -721,6 +721,9 @@
   Resource42.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
+  Resource42.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  }
   function Resource43 (uri, client) {
     this._uri = uri
     this._client = client
@@ -740,11 +743,6 @@
 
   }
 
-  Resource44.prototype.domainId = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
-
-    return new Resource45(uri, this._client)
-  }
 
   Resource44.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
@@ -753,41 +751,6 @@
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
   function Resource45 (uri, client) {
-    this._uri = uri
-    this._client = client
-
-    this.link = new Resource46(uri + '/link', client)
-    this.unlink = new Resource47(uri + '/unlink', client)
-  }
-
-
-  function Resource46 (uri, client) {
-    this._uri = uri
-    this._client = client
-
-  }
-
-
-  Resource46.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource46.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
-  }
-  function Resource47 (uri, client) {
-    this._uri = uri
-    this._client = client
-
-  }
-
-
-  Resource47.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource47.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
-  }
-  function Resource48 (uri, client) {
     this._uri = uri
     this._client = client
 

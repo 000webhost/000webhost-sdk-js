@@ -526,7 +526,7 @@ resource.patch().then(function (res) { ... });
     "type": {
       "type": "string",
       "required": true,
-      "minLength": 6
+      "minLength": 5
     }
   }
 }
@@ -566,8 +566,8 @@ resource.patch().then(function (res) { ... });
   "id": "http://jsonschema.net",
   "required": true,
   "properties": {
-    "type": {
-      "category": "string",
+    "category": {
+      "type": "string",
       "required": true,
       "minLength": 3
     }
@@ -609,8 +609,8 @@ resource.patch().then(function (res) { ... });
   "id": "http://jsonschema.net",
   "required": true,
   "properties": {
-    "type": {
-      "adult": "boolean",
+    "adult": {
+      "type": "boolean",
       "required": true
     }
   }
@@ -1422,6 +1422,68 @@ Delete blacklist
 resource.delete().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).domain
+
+```js
+var resource = client.resources.apps.app_id(app_id).domain;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get current domain information
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+##### PATCH
+
+Change application domain property
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "domain_type": {
+      "type": { "enum": [ "default","subdomain","domain" ] },
+      "required": true
+    },
+    "subdomain_prefix": {
+      "type": "string",
+      "required": true
+    },
+    "subdomain": {
+      "type": "string",
+      "required": true
+    },
+    "domain": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
+
+```
+
 #### resources.types
 
 ```js
@@ -1464,72 +1526,6 @@ Get the list of available application categories
 
 ```js
 resource.get().then(function (res) { ... });
-```
-
-#### resources.domains
-
-```js
-var resource = client.resources.domains;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### GET
-
-Get domains list
-
-```js
-resource.get().then(function (res) { ... });
-```
-
-#### resources.domains.domain_id(domain_id).link
-
-```js
-var resource = client.resources.domains.domain_id(domain_id).link;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### POST
-
-Link domain
-
-```js
-resource.post().then(function (res) { ... });
-```
-
-#### resources.domains.domain_id(domain_id).unlink
-
-```js
-var resource = client.resources.domains.domain_id(domain_id).unlink;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### POST
-
-Unlink domain
-
-```js
-resource.post().then(function (res) { ... });
 ```
 
 
