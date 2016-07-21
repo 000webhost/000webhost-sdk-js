@@ -708,6 +708,20 @@ Specify new FTP password
 
 Confirm new FTP password
 
+#### resources.apps.app_id(app_id).settings
+
+```js
+var resource = client.resources.apps.app_id(app_id).settings;
+```
+
+##### GET
+
+Get Application settings
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).databases
 
 ```js
