@@ -944,28 +944,6 @@ Delete cronjob
 resource.delete().then(function (res) { ... });
 ```
 
-#### resources.apps.app_id(app_id).statistics.disk
-
-```js
-var resource = client.resources.apps.app_id(app_id).statistics.disk;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### GET
-
-Get disk usage for application over time
-
-```js
-resource.get().then(function (res) { ... });
-```
-
 #### resources.apps.app_id(app_id).statistics.bandwidth
 
 ```js
@@ -988,10 +966,10 @@ Get bandwidth usage for application over time
 resource.get().then(function (res) { ... });
 ```
 
-#### resources.apps.app_id(app_id).statistics.inodes
+#### resources.apps.app_id(app_id).statistics.response-codes
 
 ```js
-var resource = client.resources.apps.app_id(app_id).statistics.inodes;
+var resource = client.resources.apps.app_id(app_id).statistics.response-codes;
 ```
 
 ##### OPTIONS
@@ -1004,16 +982,16 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get inodes usage for application over time
+Get bandwidth usage for application over time
 
 ```js
 resource.get().then(function (res) { ... });
 ```
 
-#### resources.apps.app_id(app_id).statistics.database
+#### resources.apps.app_id(app_id).statistics.response-time
 
 ```js
-var resource = client.resources.apps.app_id(app_id).statistics.database;
+var resource = client.resources.apps.app_id(app_id).statistics.response-time;
 ```
 
 ##### OPTIONS
@@ -1026,29 +1004,7 @@ resource.options().then(function (res) { ... });
 
 ##### GET
 
-Get all application databases usage over time
-
-```js
-resource.get().then(function (res) { ... });
-```
-
-#### resources.apps.app_id(app_id).statistics.requests
-
-```js
-var resource = client.resources.apps.app_id(app_id).statistics.requests;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### GET
-
-Get requests list for application over time
+Get bandwidth usage for application over time
 
 ```js
 resource.get().then(function (res) { ... });
@@ -1477,16 +1433,8 @@ resource.patch().then(function (res) { ... });
   "id": "http://jsonschema.net",
   "required": true,
   "properties": {
-    "domain_type": {
+    "type": {
       "type": { "enum": [ "default","subdomain","domain" ] },
-      "required": true
-    },
-    "subdomain_prefix": {
-      "type": "string",
-      "required": true
-    },
-    "subdomain": {
-      "type": "string",
       "required": true
     },
     "domain": {
