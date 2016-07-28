@@ -360,31 +360,43 @@ Create new app
 resource.post().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.post(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "app_name": {
+      "type": "string",
+      "required": true
+    },
+    "domain": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "minLength": 4
 
-* **app_name** _string_
+    }
+  }
+}
 
-Specify name for application
-
-* **domain** _string_
-
-Specify domain for application
-
-* **type** _string, one of (php55, php70), default: php55_
-
-Specify type for application
-
-* **location** _string, one of (US, UK), default: US_
-
-Specify location for application
-
-* **password** _string_
-
-Specify password for application
+```
 
 #### resources.apps.app_id(app_id)
 
@@ -690,23 +702,36 @@ Update FTP password
 resource.patch().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.patch(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+     "password_old": {
+       "type": "string",
+       "required": true,
+       "minLength": 6
+     },
+     "password_new": {
+       "type": "string",
+       "required": true,
+       "minLength": 6
+     },
+    "password_new_confirm": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    }
+  }
+}
 
-* **password_old** _string_
-
-Specify old FTP password
-
-* **password_new** _string_
-
-Specify new FTP password
-
-* **password_new_confirm** _string_
-
-Confirm new FTP password
+```
 
 #### resources.apps.app_id(app_id).settings
 
@@ -752,31 +777,43 @@ Create new databasis
 resource.post().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.post(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "ip": {
+      "type": "string",
+      "required": false,
+      "default" : "127.0.0.1"
+    },
+    "permission": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
 
-* **name** _string_
-
-Specify database name
-
-* **username** _string_
-
-Specify database username
-
-* **password** _string_
-
-Specify database password
-
-* **ip** _string, default: 127.0.0.1_
-
-Specify database user host ip
-
-* **permissions** _string, default: permit all_
-
-Specify database permissions
+```
 
 #### resources.apps.app_id(app_id).databases.database_id(database_id)
 
@@ -824,19 +861,31 @@ Change database password
 resource.patch().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.patch(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "password_new": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    },
+    "password_new_confirm": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    }
+  }
+}
 
-* **password_new** _string_
-
-Specify new database password
-
-* **password_new_confirm** _string_
-
-Confirm new database password
+```
 
 #### resources.apps.app_id(app_id).databases.database_id(database_id).usage
 
@@ -890,35 +939,57 @@ Create new cronjob
 resource.post().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.post(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "job": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "minLength": 4
+    },
+    "minute": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "minLength": 4
+    },
+    "minute": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "minLength": 4
+    },
+    "hour": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "minLength": 2
+    },
+    "month": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "minLength": 2
+    },
+    "weekday": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 1
+    }
+  }
+}
 
-* **job** _string_
-
-Cron job
-
-* **minute** _string_
-
-Cron minute value
-
-* **hour** _string_
-
-Cron hour value
-
-* **day** _string_
-
-Cron day value
-
-* **month** _string_
-
-Cron month value
-
-* **weekday** _string_
-
-Cron weekday value
+```
 
 #### resources.apps.app_id(app_id).cronjobs.cron_id(cron_id)
 
@@ -1010,6 +1081,28 @@ Get bandwidth usage for application over time
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).statistics.disk-quota
+
+```js
+var resource = client.resources.apps.app_id(app_id).statistics.disk-quota;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get bandwidth usage for application over time
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).backend
 
 ```js
@@ -1070,23 +1163,38 @@ Create new redirect
 resource.post().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.post(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "from": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 150
+    },
+    "to": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 150
+    },
+    "type": {
+      "type": "integer",
+      "required": false,
+      "default": 301
+    }
+  }
+}
 
-* **from** _string_
-
-Specify from url
-
-* **to** _string_
-
-Specify to url
-
-* **type** _integer, default: 301_
-
-Specify redirect type
+```
 
 #### resources.apps.app_id(app_id).redirects.redirect_id(redirect_id)
 
@@ -1142,23 +1250,39 @@ Create new password-protected-directory
 resource.post().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.post(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "directory": {
+      "type": "string",
+      "required": false,
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "username": {
+      "type": "string",
+      "required": true,
+      "minLength": 2,
+      "maxLength": 30
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 30
+    }
+  }
+}
 
-* **directory** _string, default: /_
-
-Specify directory path
-
-* **username** _string_
-
-Specify auth user
-
-* **password** _string_
-
-Specify auth user password
+```
 
 #### resources.apps.app_id(app_id).security.password-protected-directories.dir_id(dir_id)
 
@@ -1240,6 +1364,43 @@ Specify hotlink extensions
 
 Allow direct requests
 
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "domain": {
+      "type": "string",
+      "required": true
+    },
+    "redirect": {
+      "type": "string",
+      "required": true
+    },
+    "redirect_protocol": {
+      "type": "string",
+      "required": false
+    },
+    "extensions": {
+      "type": "string",
+      "required": true
+    },
+    "direct_requests": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    }
+  }
+}
+
+```
+
 #### resources.apps.app_id(app_id).security.hotlink-protection.hostlink_id(hostlink_id)
 
 * **hostlink_id** _string_
@@ -1294,15 +1455,25 @@ Create new whitelist
 resource.post().then(function (res) { ... });
 ```
 
-##### Query Parameters
+##### Body
 
-```javascript
-resource.post(null, { query: { ... } });
+**application/json**
+
 ```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "ip": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
 
-* **ip** _string_
-
-Specify IP Address
+```
 
 #### resources.apps.app_id(app_id).security.ip.whitelist.whitelist_id(whitelist_id)
 
@@ -1367,6 +1538,26 @@ resource.post(null, { query: { ... } });
 * **ip** _string_
 
 Specify IP Address
+
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "ip": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
+
+```
 
 #### resources.apps.app_id(app_id).security.ip.blacklist.blacklist_id(blacklist_id)
 
