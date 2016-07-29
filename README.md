@@ -1637,6 +1637,28 @@ resource.patch().then(function (res) { ... });
 
 ```
 
+#### resources.apps.app_id(app_id).zyro
+
+```js
+var resource = client.resources.apps.app_id(app_id).zyro;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get URL to Zyro application
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js

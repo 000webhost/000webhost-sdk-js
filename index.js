@@ -78,9 +78,9 @@
 
     this.users = new Resource1(uri + '/users', client)
     this.apps = new Resource8(uri + '/apps', client)
-    this.types = new Resource43(uri + '/types', client)
-    this.categories = new Resource44(uri + '/categories', client)
-    this.zyro = new Resource45(uri + '/zyro', client)
+    this.types = new Resource44(uri + '/types', client)
+    this.categories = new Resource45(uri + '/categories', client)
+    this.zyro = new Resource46(uri + '/zyro', client)
   }
 
 
@@ -225,6 +225,7 @@
     this.redirects = new Resource30(uri + '/redirects', client)
     this.security = new Resource32(uri + '/security', client)
     this.domain = new Resource42(uri + '/domain', client)
+    this.zyro = new Resource43(uri + '/zyro', client)
   }
 
 
@@ -748,6 +749,19 @@
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
   function Resource45 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource45.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource45.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  function Resource46 (uri, client) {
     this._uri = uri
     this._client = client
 
