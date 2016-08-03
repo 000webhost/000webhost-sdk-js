@@ -1659,6 +1659,28 @@ Get URL to Zyro application
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).logs
+
+```js
+var resource = client.resources.apps.app_id(app_id).logs;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the activity log for the application
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
