@@ -1015,6 +1015,28 @@ Delete cronjob
 resource.delete().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).statistics.all
+
+```js
+var resource = client.resources.apps.app_id(app_id).statistics.all;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get bandwidth usage for application over time
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).statistics.bandwidth
 
 ```js
