@@ -733,6 +733,28 @@ resource.patch().then(function (res) { ... });
 
 ```
 
+#### resources.apps.app_id(app_id).files.permissions
+
+```js
+var resource = client.resources.apps.app_id(app_id).files.permissions;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Fix file permissions
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).settings
 
 ```js
