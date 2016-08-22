@@ -276,6 +276,36 @@ resource.patch().then(function (res) { ... });
 
 ```
 
+#### resources.users.user_id(user_id).email-verify
+
+```js
+var resource = client.resources.users.user_id(user_id).email-verify;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).email-verify.token(token)
+
+* **token** _string_
+
+```js
+var resource = client.resources.users.user_id(user_id).email-verify.token(token);
+```
+
+##### POST
+
+Verifies user's email with a token
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id).resend-confirmation
 
 ```js
