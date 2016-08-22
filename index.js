@@ -88,6 +88,7 @@
     this._uri = uri
     this._client = client
 
+    this.emailVerify = new Resource8(uri + '/email-verify', client)
   }
 
   Resource1.prototype.userId = function (/* ...args */) {
@@ -103,9 +104,8 @@
     this.password = new Resource3(uri + '/password', client)
     this.phoneNumber = new Resource4(uri + '/phone-number', client)
     this.email = new Resource5(uri + '/email', client)
-    this.emailVerify = new Resource6(uri + '/email-verify', client)
-    this.resendConfirmation = new Resource8(uri + '/resend-confirmation', client)
-    this.steps = new Resource9(uri + '/steps', client)
+    this.resendConfirmation = new Resource6(uri + '/resend-confirmation', client)
+    this.steps = new Resource7(uri + '/steps', client)
   }
 
 
@@ -166,14 +166,12 @@
 
   }
 
-  Resource6.prototype.token = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
-
-    return new Resource7(uri, this._client)
-  }
 
   Resource6.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource6.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource7 (uri, client) {
     this._uri = uri
@@ -182,8 +180,11 @@
   }
 
 
-  Resource7.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
+  Resource7.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource7.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
   }
   function Resource8 (uri, client) {
     this._uri = uri
@@ -191,12 +192,14 @@
 
   }
 
+  Resource8.prototype.token = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource9(uri, this._client)
+  }
 
   Resource8.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource8.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource9 (uri, client) {
     this._uri = uri
@@ -205,11 +208,8 @@
   }
 
 
-  Resource9.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource9.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
+  Resource9.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource10 (uri, client) {
     this._uri = uri
