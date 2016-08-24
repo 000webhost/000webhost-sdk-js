@@ -136,10 +136,10 @@ resource.patch().then(function (res) { ... });
 
 ```
 
-#### resources.users.user_id(user_id).password
+#### resources.users.user_id(user_id).password-reset
 
 ```js
-var resource = client.resources.users.user_id(user_id).password;
+var resource = client.resources.users.user_id(user_id).password-reset;
 ```
 
 ##### OPTIONS
@@ -150,43 +150,12 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-##### PATCH
+##### POST
 
-Update user password
+Request a new password reset link
 
 ```js
-resource.patch().then(function (res) { ... });
-```
-
-##### Body
-
-**application/json**
-
-```
-{
-  "type": "object",
-  "$schema": "http://json-schema.org/draft-03/schema",
-  "id": "http://jsonschema.net",
-  "required": true,
-  "properties": {
-    "password_old": {
-      "type": "string",
-      "required": true,
-      "minLength": 6
-    },
-    "password_new": {
-      "type": "string",
-      "required": true,
-      "minLength": 6
-    },
-    "password_new_confirm": {
-      "type": "string",
-      "required": true,
-      "minLength": 6
-    }
-  }
-}
-
+resource.post().then(function (res) { ... });
 ```
 
 #### resources.users.user_id(user_id).phone-number
@@ -348,6 +317,44 @@ Verifies user's email with a token
 
 ```js
 resource.post().then(function (res) { ... });
+```
+
+#### resources.users.password-reset
+
+```js
+var resource = client.resources.users.password-reset;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+#### resources.users.password-reset.token(token)
+
+* **token** _string_
+
+```js
+var resource = client.resources.users.password-reset.token(token);
+```
+
+##### GET
+
+Retrieve password reset token details
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+##### PATCH
+
+Set a new password using password reset token
+
+```js
+resource.patch().then(function (res) { ... });
 ```
 
 #### resources.apps
