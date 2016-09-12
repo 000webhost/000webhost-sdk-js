@@ -319,6 +319,38 @@ Verifies user's email with a token
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.users.social.unlink.provider(provider)
+
+* **provider** _string_
+
+```js
+var resource = client.resources.users.social.unlink.provider(provider);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+#### resources.users.social.unlink.provider(provider).token(token)
+
+* **token** _string_
+
+```js
+var resource = client.resources.users.social.unlink.provider(provider).token(token);
+```
+
+##### GET
+
+Unlink User from social network
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.users.password-reset
 
 ```js
