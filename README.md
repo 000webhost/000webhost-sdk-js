@@ -335,20 +335,12 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-#### resources.users.social.unlink.provider(provider).token(token)
-
-* **token** _string_
-
-```js
-var resource = client.resources.users.social.unlink.provider(provider).token(token);
-```
-
-##### GET
+##### PATCH
 
 Unlink User from social network
 
 ```js
-resource.get().then(function (res) { ... });
+resource.patch().then(function (res) { ... });
 ```
 
 #### resources.users.password-reset
