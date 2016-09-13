@@ -992,6 +992,28 @@ Get database usage over time
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).databases.database_id(database_id).login
+
+```js
+var resource = client.resources.apps.app_id(app_id).databases.database_id(database_id).login;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get database login key
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).cronjobs
 
 ```js

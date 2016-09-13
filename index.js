@@ -78,9 +78,9 @@
 
     this.users = new Resource1(uri + '/users', client)
     this.apps = new Resource15(uri + '/apps', client)
-    this.types = new Resource54(uri + '/types', client)
-    this.categories = new Resource55(uri + '/categories', client)
-    this.zyro = new Resource56(uri + '/zyro', client)
+    this.types = new Resource55(uri + '/types', client)
+    this.categories = new Resource56(uri + '/categories', client)
+    this.zyro = new Resource57(uri + '/zyro', client)
   }
 
 
@@ -308,14 +308,14 @@
     this.files = new Resource23(uri + '/files', client)
     this.settings = new Resource25(uri + '/settings', client)
     this.databases = new Resource26(uri + '/databases', client)
-    this.cronjobs = new Resource30(uri + '/cronjobs', client)
-    this.statistics = new Resource32(uri + '/statistics', client)
-    this.backend = new Resource38(uri + '/backend', client)
-    this.redirects = new Resource39(uri + '/redirects', client)
-    this.security = new Resource41(uri + '/security', client)
-    this.domain = new Resource51(uri + '/domain', client)
-    this.zyro = new Resource52(uri + '/zyro', client)
-    this.logs = new Resource53(uri + '/logs', client)
+    this.cronjobs = new Resource31(uri + '/cronjobs', client)
+    this.statistics = new Resource33(uri + '/statistics', client)
+    this.backend = new Resource39(uri + '/backend', client)
+    this.redirects = new Resource40(uri + '/redirects', client)
+    this.security = new Resource42(uri + '/security', client)
+    this.domain = new Resource52(uri + '/domain', client)
+    this.zyro = new Resource53(uri + '/zyro', client)
+    this.logs = new Resource54(uri + '/logs', client)
   }
 
 
@@ -473,6 +473,7 @@
 
     this.changePassword = new Resource28(uri + '/change-password', client)
     this.usage = new Resource29(uri + '/usage', client)
+    this.login = new Resource30(uri + '/login', client)
   }
 
 
@@ -514,11 +515,6 @@
 
   }
 
-  Resource30.prototype.cronId = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
-
-    return new Resource31(uri, this._client)
-  }
 
   Resource30.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
@@ -526,47 +522,52 @@
   Resource30.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
-  Resource30.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
-  }
   function Resource31 (uri, client) {
     this._uri = uri
     this._client = client
 
   }
 
+  Resource31.prototype.cronId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource32(uri, this._client)
+  }
 
   Resource31.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource31.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  Resource31.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource31.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource32 (uri, client) {
     this._uri = uri
     this._client = client
 
-    this.all = new Resource33(uri + '/all', client)
-    this.bandwidth = new Resource34(uri + '/bandwidth', client)
-    this.responseCodes = new Resource35(uri + '/response-codes', client)
-    this.responseTime = new Resource36(uri + '/response-time', client)
-    this.diskQuota = new Resource37(uri + '/disk-quota', client)
   }
 
 
+  Resource32.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource32.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  }
   function Resource33 (uri, client) {
     this._uri = uri
     this._client = client
 
+    this.all = new Resource34(uri + '/all', client)
+    this.bandwidth = new Resource35(uri + '/bandwidth', client)
+    this.responseCodes = new Resource36(uri + '/response-codes', client)
+    this.responseTime = new Resource37(uri + '/response-time', client)
+    this.diskQuota = new Resource38(uri + '/disk-quota', client)
   }
 
 
-  Resource33.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource33.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
-  }
   function Resource34 (uri, client) {
     this._uri = uri
     this._client = client
@@ -632,20 +633,12 @@
   Resource38.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
-  Resource38.prototype.patch = function (body, options) {
-    return handleRequest(this._client, this._uri, 'PATCH', body, options)
-  }
   function Resource39 (uri, client) {
     this._uri = uri
     this._client = client
 
   }
 
-  Resource39.prototype.redirectId = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
-
-    return new Resource40(uri, this._client)
-  }
 
   Resource39.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
@@ -653,8 +646,8 @@
   Resource39.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
-  Resource39.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
+  Resource39.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
   }
   function Resource40 (uri, client) {
     this._uri = uri
@@ -662,56 +655,64 @@
 
   }
 
+  Resource40.prototype.redirectId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource41(uri, this._client)
+  }
 
   Resource40.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource40.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  Resource40.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource40.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource41 (uri, client) {
     this._uri = uri
     this._client = client
 
-    this.passwordProtectedDirectories = new Resource42(uri + '/password-protected-directories', client)
-    this.hotlinkProtection = new Resource44(uri + '/hotlink-protection', client)
-    this.ip = new Resource46(uri + '/ip', client)
   }
 
 
+  Resource41.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource41.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  }
   function Resource42 (uri, client) {
     this._uri = uri
     this._client = client
 
+    this.passwordProtectedDirectories = new Resource43(uri + '/password-protected-directories', client)
+    this.hotlinkProtection = new Resource45(uri + '/hotlink-protection', client)
+    this.ip = new Resource47(uri + '/ip', client)
   }
 
-  Resource42.prototype.dirId = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
 
-    return new Resource43(uri, this._client)
-  }
-
-  Resource42.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource42.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
-  }
-  Resource42.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
-  }
   function Resource43 (uri, client) {
     this._uri = uri
     this._client = client
 
   }
 
+  Resource43.prototype.dirId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource44(uri, this._client)
+  }
 
   Resource43.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource43.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  Resource43.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource43.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource44 (uri, client) {
     this._uri = uri
@@ -719,20 +720,12 @@
 
   }
 
-  Resource44.prototype.hostlinkId = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
-
-    return new Resource45(uri, this._client)
-  }
 
   Resource44.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource44.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
-  }
-  Resource44.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
+  Resource44.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
   function Resource45 (uri, client) {
     this._uri = uri
@@ -740,55 +733,63 @@
 
   }
 
+  Resource45.prototype.hostlinkId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource46(uri, this._client)
+  }
 
   Resource45.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource45.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  Resource45.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource45.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource46 (uri, client) {
     this._uri = uri
     this._client = client
 
-    this.whitelist = new Resource47(uri + '/whitelist', client)
-    this.blacklist = new Resource49(uri + '/blacklist', client)
   }
 
 
+  Resource46.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource46.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  }
   function Resource47 (uri, client) {
     this._uri = uri
     this._client = client
 
+    this.whitelist = new Resource48(uri + '/whitelist', client)
+    this.blacklist = new Resource50(uri + '/blacklist', client)
   }
 
-  Resource47.prototype.whitelistId = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
 
-    return new Resource48(uri, this._client)
-  }
-
-  Resource47.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource47.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
-  }
-  Resource47.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
-  }
   function Resource48 (uri, client) {
     this._uri = uri
     this._client = client
 
   }
 
+  Resource48.prototype.whitelistId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource49(uri, this._client)
+  }
 
   Resource48.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource48.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  Resource48.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource48.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource49 (uri, client) {
     this._uri = uri
@@ -796,20 +797,12 @@
 
   }
 
-  Resource49.prototype.blacklistId = function (/* ...args */) {
-    var uri = this._uri + template('/{0}', arguments, [undefined])
-
-    return new Resource50(uri, this._client)
-  }
 
   Resource49.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource49.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
-  }
-  Resource49.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
+  Resource49.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
   function Resource50 (uri, client) {
     this._uri = uri
@@ -817,12 +810,20 @@
 
   }
 
+  Resource50.prototype.blacklistId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource51(uri, this._client)
+  }
 
   Resource50.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource50.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  Resource50.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource50.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource51 (uri, client) {
     this._uri = uri
@@ -834,11 +835,8 @@
   Resource51.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource51.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
-  }
-  Resource51.prototype.patch = function (body, options) {
-    return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  Resource51.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
   function Resource52 (uri, client) {
     this._uri = uri
@@ -852,6 +850,9 @@
   }
   Resource52.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  Resource52.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
   }
   function Resource53 (uri, client) {
     this._uri = uri
@@ -893,6 +894,19 @@
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
   function Resource56 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource56.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource56.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  function Resource57 (uri, client) {
     this._uri = uri
     this._client = client
 
