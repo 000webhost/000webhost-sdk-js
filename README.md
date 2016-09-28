@@ -1830,6 +1830,28 @@ Get application's build status
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).install
+
+```js
+var resource = client.resources.apps.app_id(app_id).install;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Install specified software to user's application
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js

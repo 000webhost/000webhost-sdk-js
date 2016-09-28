@@ -78,9 +78,9 @@
 
     this.users = new Resource1(uri + '/users', client)
     this.apps = new Resource15(uri + '/apps', client)
-    this.types = new Resource56(uri + '/types', client)
-    this.categories = new Resource57(uri + '/categories', client)
-    this.zyro = new Resource58(uri + '/zyro', client)
+    this.types = new Resource57(uri + '/types', client)
+    this.categories = new Resource58(uri + '/categories', client)
+    this.zyro = new Resource59(uri + '/zyro', client)
   }
 
 
@@ -317,6 +317,7 @@
     this.zyro = new Resource53(uri + '/zyro', client)
     this.logs = new Resource54(uri + '/logs', client)
     this.buildStatus = new Resource55(uri + '/build_status', client)
+    this.install = new Resource56(uri + '/install', client)
   }
 
 
@@ -904,8 +905,8 @@
   Resource56.prototype.options = function (body, options) {
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
-  Resource56.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
+  Resource56.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource57 (uri, client) {
     this._uri = uri
@@ -921,6 +922,19 @@
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
   function Resource58 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource58.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource58.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  function Resource59 (uri, client) {
     this._uri = uri
     this._client = client
 
