@@ -1808,6 +1808,28 @@ Get the activity log for the application
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).build_status
+
+```js
+var resource = client.resources.apps.app_id(app_id).build_status;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get application's build status
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
