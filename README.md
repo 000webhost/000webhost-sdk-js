@@ -1874,6 +1874,88 @@ Get the list of available application types
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.parked-domains
+
+```js
+var resource = client.resources.parked-domains;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of parked domains
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+##### POST
+
+Park a new domain
+
+```js
+resource.post().then(function (res) { ... });
+```
+
+#### resources.parked-domains.domain_id(domain_id)
+
+* **domain_id** _string_
+
+```js
+var resource = client.resources.parked-domains.domain_id(domain_id);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### DELETE
+
+Deletes a parked domain
+
+```js
+resource.delete().then(function (res) { ... });
+```
+
+#### resources.parked-domains.domain_id(domain_id).status
+
+```js
+var resource = client.resources.parked-domains.domain_id(domain_id).status;
+```
+
+##### GET
+
+Get name server status for a parked domain
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.parked-domains.domain_id(domain_id).records
+
+```js
+var resource = client.resources.parked-domains.domain_id(domain_id).records;
+```
+
+##### PATCH
+
+Updates DNS records for a parked domain
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.categories
 
 ```js
