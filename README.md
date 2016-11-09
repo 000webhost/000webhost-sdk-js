@@ -1852,12 +1852,10 @@ Install specified software to user's application
 resource.post().then(function (res) { ... });
 ```
 
-#### resources.apps.app_id(app_id).domains.search.domain_name_base64(domain_name_base64)
-
-* **domain_name_base64** _string_
+#### resources.apps.app_id(app_id).domains.search
 
 ```js
-var resource = client.resources.apps.app_id(app_id).domains.search.domain_name_base64(domain_name_base64);
+var resource = client.resources.apps.app_id(app_id).domains.search;
 ```
 
 ##### OPTIONS
@@ -1868,18 +1866,16 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-##### GET
+##### POST
 
 ```js
-resource.get().then(function (res) { ... });
+resource.post().then(function (res) { ... });
 ```
 
-#### resources.apps.app_id(app_id).domains.check.domain_name_base64(domain_name_base64)
-
-* **domain_name_base64** _string_
+#### resources.apps.app_id(app_id).domains.check
 
 ```js
-var resource = client.resources.apps.app_id(app_id).domains.check.domain_name_base64(domain_name_base64);
+var resource = client.resources.apps.app_id(app_id).domains.check;
 ```
 
 ##### OPTIONS
@@ -1890,20 +1886,18 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-##### GET
+##### POST
 
 Check domain availability
 
 ```js
-resource.get().then(function (res) { ... });
+resource.post().then(function (res) { ... });
 ```
 
-#### resources.apps.app_id(app_id).domains.buy.domain_name_base64(domain_name_base64)
-
-* **domain_name_base64** _string_
+#### resources.apps.app_id(app_id).domains.buy
 
 ```js
-var resource = client.resources.apps.app_id(app_id).domains.buy.domain_name_base64(domain_name_base64);
+var resource = client.resources.apps.app_id(app_id).domains.buy;
 ```
 
 ##### OPTIONS
@@ -1914,12 +1908,12 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-##### GET
+##### POST
 
 Create domain purchase invoice
 
 ```js
-resource.get().then(function (res) { ... });
+resource.post().then(function (res) { ... });
 ```
 
 #### resources.types
