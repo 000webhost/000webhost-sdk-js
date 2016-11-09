@@ -1852,6 +1852,76 @@ Install specified software to user's application
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).domains.search.domain_name_base64(domain_name_base64)
+
+* **domain_name_base64** _string_
+
+```js
+var resource = client.resources.apps.app_id(app_id).domains.search.domain_name_base64(domain_name_base64);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).domains.check.domain_name_base64(domain_name_base64)
+
+* **domain_name_base64** _string_
+
+```js
+var resource = client.resources.apps.app_id(app_id).domains.check.domain_name_base64(domain_name_base64);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Check domain availability
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).domains.buy.domain_name_base64(domain_name_base64)
+
+* **domain_name_base64** _string_
+
+```js
+var resource = client.resources.apps.app_id(app_id).domains.buy.domain_name_base64(domain_name_base64);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Create domain purchase invoice
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
