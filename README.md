@@ -1852,70 +1852,6 @@ Install specified software to user's application
 resource.post().then(function (res) { ... });
 ```
 
-#### resources.apps.app_id(app_id).domains.search
-
-```js
-var resource = client.resources.apps.app_id(app_id).domains.search;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### POST
-
-```js
-resource.post().then(function (res) { ... });
-```
-
-#### resources.apps.app_id(app_id).domains.check
-
-```js
-var resource = client.resources.apps.app_id(app_id).domains.check;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### POST
-
-Check domain availability
-
-```js
-resource.post().then(function (res) { ... });
-```
-
-#### resources.apps.app_id(app_id).domains.buy
-
-```js
-var resource = client.resources.apps.app_id(app_id).domains.buy;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### POST
-
-Create domain purchase invoice
-
-```js
-resource.post().then(function (res) { ... });
-```
-
 #### resources.types
 
 ```js
@@ -2040,6 +1976,70 @@ Get the list of available application categories
 
 ```js
 resource.get().then(function (res) { ... });
+```
+
+#### resources.domains.search
+
+```js
+var resource = client.resources.domains.search;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+```js
+resource.post().then(function (res) { ... });
+```
+
+#### resources.domains.check
+
+```js
+var resource = client.resources.domains.check;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Check domain availability
+
+```js
+resource.post().then(function (res) { ... });
+```
+
+#### resources.domains.buy
+
+```js
+var resource = client.resources.domains.buy;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Create domain purchase invoice
+
+```js
+resource.post().then(function (res) { ... });
 ```
 
 
