@@ -1054,32 +1054,47 @@
     this._client = client
   }
 
-  CustomResource.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
+  CustomResource.prototype.acl = function (body, options) {
+    return handleRequest(this._client, this._uri, 'ACL', body, options)
   }
-  CustomResource.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
+  CustomResource.prototype.bind = function (body, options) {
+    return handleRequest(this._client, this._uri, 'BIND', body, options)
   }
-  CustomResource.prototype.put = function (body, options) {
-    return handleRequest(this._client, this._uri, 'PUT', body, options)
+  CustomResource.prototype.checkout = function (body, options) {
+    return handleRequest(this._client, this._uri, 'CHECKOUT', body, options)
   }
-  CustomResource.prototype.head = function (body, options) {
-    return handleRequest(this._client, this._uri, 'HEAD', body, options)
-  }
-  CustomResource.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
-  }
-  CustomResource.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  CustomResource.prototype.trace = function (body, options) {
-    return handleRequest(this._client, this._uri, 'TRACE', body, options)
+  CustomResource.prototype.connect = function (body, options) {
+    return handleRequest(this._client, this._uri, 'CONNECT', body, options)
   }
   CustomResource.prototype.copy = function (body, options) {
     return handleRequest(this._client, this._uri, 'COPY', body, options)
   }
+  CustomResource.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
+  }
+  CustomResource.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  CustomResource.prototype.head = function (body, options) {
+    return handleRequest(this._client, this._uri, 'HEAD', body, options)
+  }
+  CustomResource.prototype.link = function (body, options) {
+    return handleRequest(this._client, this._uri, 'LINK', body, options)
+  }
   CustomResource.prototype.lock = function (body, options) {
     return handleRequest(this._client, this._uri, 'LOCK', body, options)
+  }
+  CustomResource.prototype.mSearch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'M-SEARCH', body, options)
+  }
+  CustomResource.prototype.merge = function (body, options) {
+    return handleRequest(this._client, this._uri, 'MERGE', body, options)
+  }
+  CustomResource.prototype.mkactivity = function (body, options) {
+    return handleRequest(this._client, this._uri, 'MKACTIVITY', body, options)
+  }
+  CustomResource.prototype.mkcalendar = function (body, options) {
+    return handleRequest(this._client, this._uri, 'MKCALENDAR', body, options)
   }
   CustomResource.prototype.mkcol = function (body, options) {
     return handleRequest(this._client, this._uri, 'MKCOL', body, options)
@@ -1087,8 +1102,17 @@
   CustomResource.prototype.move = function (body, options) {
     return handleRequest(this._client, this._uri, 'MOVE', body, options)
   }
-  CustomResource.prototype.purge = function (body, options) {
-    return handleRequest(this._client, this._uri, 'PURGE', body, options)
+  CustomResource.prototype.notify = function (body, options) {
+    return handleRequest(this._client, this._uri, 'NOTIFY', body, options)
+  }
+  CustomResource.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  CustomResource.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  }
+  CustomResource.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   CustomResource.prototype.propfind = function (body, options) {
     return handleRequest(this._client, this._uri, 'PROPFIND', body, options)
@@ -1096,41 +1120,38 @@
   CustomResource.prototype.proppatch = function (body, options) {
     return handleRequest(this._client, this._uri, 'PROPPATCH', body, options)
   }
-  CustomResource.prototype.unlock = function (body, options) {
-    return handleRequest(this._client, this._uri, 'UNLOCK', body, options)
+  CustomResource.prototype.purge = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PURGE', body, options)
+  }
+  CustomResource.prototype.put = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PUT', body, options)
+  }
+  CustomResource.prototype.rebind = function (body, options) {
+    return handleRequest(this._client, this._uri, 'REBIND', body, options)
   }
   CustomResource.prototype.report = function (body, options) {
     return handleRequest(this._client, this._uri, 'REPORT', body, options)
   }
-  CustomResource.prototype.mkactivity = function (body, options) {
-    return handleRequest(this._client, this._uri, 'MKACTIVITY', body, options)
-  }
-  CustomResource.prototype.checkout = function (body, options) {
-    return handleRequest(this._client, this._uri, 'CHECKOUT', body, options)
-  }
-  CustomResource.prototype.merge = function (body, options) {
-    return handleRequest(this._client, this._uri, 'MERGE', body, options)
-  }
-  CustomResource.prototype.mSearch = function (body, options) {
-    return handleRequest(this._client, this._uri, 'M-SEARCH', body, options)
-  }
-  CustomResource.prototype.notify = function (body, options) {
-    return handleRequest(this._client, this._uri, 'NOTIFY', body, options)
+  CustomResource.prototype.search = function (body, options) {
+    return handleRequest(this._client, this._uri, 'SEARCH', body, options)
   }
   CustomResource.prototype.subscribe = function (body, options) {
     return handleRequest(this._client, this._uri, 'SUBSCRIBE', body, options)
   }
+  CustomResource.prototype.trace = function (body, options) {
+    return handleRequest(this._client, this._uri, 'TRACE', body, options)
+  }
+  CustomResource.prototype.unbind = function (body, options) {
+    return handleRequest(this._client, this._uri, 'UNBIND', body, options)
+  }
+  CustomResource.prototype.unlink = function (body, options) {
+    return handleRequest(this._client, this._uri, 'UNLINK', body, options)
+  }
+  CustomResource.prototype.unlock = function (body, options) {
+    return handleRequest(this._client, this._uri, 'UNLOCK', body, options)
+  }
   CustomResource.prototype.unsubscribe = function (body, options) {
     return handleRequest(this._client, this._uri, 'UNSUBSCRIBE', body, options)
-  }
-  CustomResource.prototype.patch = function (body, options) {
-    return handleRequest(this._client, this._uri, 'PATCH', body, options)
-  }
-  CustomResource.prototype.search = function (body, options) {
-    return handleRequest(this._client, this._uri, 'SEARCH', body, options)
-  }
-  CustomResource.prototype.connect = function (body, options) {
-    return handleRequest(this._client, this._uri, 'CONNECT', body, options)
   }
 
   function Client (options) {
