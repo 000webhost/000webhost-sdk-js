@@ -1006,6 +1006,7 @@
     this.search = new Resource65(uri + '/search', client)
     this.check = new Resource66(uri + '/check', client)
     this.buy = new Resource67(uri + '/buy', client)
+    this.invoice = new Resource68(uri + '/invoice', client)
   }
 
 
@@ -1046,6 +1047,19 @@
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
   Resource67.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
+  }
+  function Resource68 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource68.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource68.prototype.post = function (body, options) {
     return handleRequest(this._client, this._uri, 'POST', body, options)
   }
 

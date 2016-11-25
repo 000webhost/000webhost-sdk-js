@@ -2042,6 +2042,28 @@ Create domain purchase invoice
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.domains.invoice
+
+```js
+var resource = client.resources.domains.invoice;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Get invoice autologin URL
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 
 
 ### Custom Resources
