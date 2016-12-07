@@ -289,6 +289,52 @@ Get user gamification progress
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).async.messages
+
+```js
+var resource = client.resources.users.user_id(user_id).async.messages;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get user complated async job
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).async.messages.message_id(message_id)
+
+* **message_id** _string_
+
+```js
+var resource = client.resources.users.user_id(user_id).async.messages.message_id(message_id);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Set user complated async job as seen
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.users.email-verify
 
 ```js
