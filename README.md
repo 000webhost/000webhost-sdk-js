@@ -779,6 +779,48 @@ resource.patch().then(function (res) { ... });
 
 ```
 
+#### resources.apps.app_id(app_id).ftp
+
+```js
+var resource = client.resources.apps.app_id(app_id).ftp;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Turn on/off ftp
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "active": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
+
+```
+
 #### resources.apps.app_id(app_id).files
 
 ```js
