@@ -427,6 +427,52 @@ Set a new password using password reset token
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.emailforwards
+
+```js
+var resource = client.resources.emailforwards;
+```
+
+##### GET
+
+Get user information
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+##### POST
+
+Get user information
+
+```js
+resource.post().then(function (res) { ... });
+```
+
+#### resources.emailforwards.id(id)
+
+* **id** _string_
+
+```js
+var resource = client.resources.emailforwards.id(id);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### DELETE
+
+Delete user
+
+```js
+resource.delete().then(function (res) { ... });
+```
+
 #### resources.apps
 
 ```js
