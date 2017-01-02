@@ -289,6 +289,14 @@ Get user gamification progress
 resource.get().then(function (res) { ... });
 ```
 
+##### PATCH
+
+Marks given gamification step as completed
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id).async.messages
 
 ```js

@@ -192,6 +192,9 @@
   Resource7.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
+  Resource7.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  }
   function Resource8 (uri, client) {
     this._uri = uri
     this._client = client
