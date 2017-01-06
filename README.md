@@ -435,6 +435,20 @@ Set a new password using password reset token
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.nps
+
+```js
+var resource = client.resources.nps;
+```
+
+##### PATCH
+
+Net promotion score track
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.emailforwards
 
 ```js
