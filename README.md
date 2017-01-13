@@ -889,6 +889,32 @@ resource.patch().then(function (res) { ... });
 
 ```
 
+#### resources.apps.app_id(app_id).changestate
+
+```js
+var resource = client.resources.apps.app_id(app_id).changestate;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+on/off
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+##### Body
+
+**application/json**
+
 #### resources.apps.app_id(app_id).ftp
 
 ```js
