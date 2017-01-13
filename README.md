@@ -905,15 +905,11 @@ resource.options().then(function (res) { ... });
 
 ##### PATCH
 
-on/off
+Change state  ( global action for all future switches )
 
 ```js
 resource.patch().then(function (res) { ... });
 ```
-
-##### Body
-
-**application/json**
 
 #### resources.apps.app_id(app_id).ftp
 
