@@ -449,6 +449,20 @@ Net promotion score track
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.upgrade.hostinger
+
+```js
+var resource = client.resources.upgrade.hostinger;
+```
+
+##### GET
+
+Get upgrade to hostinger link
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.emailforwards
 
 ```js
