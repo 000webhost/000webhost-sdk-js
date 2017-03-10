@@ -347,8 +347,8 @@
   }
 
 
-  Resource20.prototype.get = function (body, options) {
-    return handleRequest(this._client, this._uri, 'GET', body, options)
+  Resource20.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
   function Resource21 (uri, client) {
     this._uri = uri

@@ -455,12 +455,12 @@ resource.patch().then(function (res) { ... });
 var resource = client.resources.upgrade.hostinger;
 ```
 
-##### GET
+##### POST
 
 Get upgrade to hostinger link
 
 ```js
-resource.get().then(function (res) { ... });
+resource.post().then(function (res) { ... });
 ```
 
 #### resources.emailforwards
