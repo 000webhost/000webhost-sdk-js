@@ -2086,6 +2086,28 @@ Install specified software to user's application
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).filemanager.wasaccessed
+
+```js
+var resource = client.resources.apps.app_id(app_id).filemanager.wasaccessed;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Trigger File Manager access Amplitude event
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
