@@ -83,9 +83,9 @@
     this.apps = new Resource23(uri + '/apps', client)
     this.types = new Resource70(uri + '/types', client)
     this.parkedDomains = new Resource71(uri + '/parked-domains', client)
-    this.categories = new Resource75(uri + '/categories', client)
-    this.zyro = new Resource76(uri + '/zyro', client)
-    this.domains = new Resource77(uri + '/domains', client)
+    this.categories = new Resource77(uri + '/categories', client)
+    this.zyro = new Resource78(uri + '/zyro', client)
+    this.domains = new Resource79(uri + '/domains', client)
   }
 
 
@@ -1098,10 +1098,15 @@
 
   }
 
-  Resource71.prototype.domainId = function (/* ...args */) {
+  Resource71.prototype.appName = function (/* ...args */) {
     var uri = this._uri + template('/{0}', arguments, [undefined])
 
     return new Resource72(uri, this._client)
+  }
+  Resource71.prototype.domainId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource74(uri, this._client)
   }
 
   Resource71.prototype.options = function (body, options) {
@@ -1117,17 +1122,10 @@
     this._uri = uri
     this._client = client
 
-    this.status = new Resource73(uri + '/status', client)
-    this.records = new Resource74(uri + '/records', client)
+    this.has3RdParty = new Resource73(uri + '/has-3rd-party', client)
   }
 
 
-  Resource72.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource72.prototype.delete = function (body, options) {
-    return handleRequest(this._client, this._uri, 'DELETE', body, options)
-  }
   function Resource73 (uri, client) {
     this._uri = uri
     this._client = client
@@ -1142,11 +1140,16 @@
     this._uri = uri
     this._client = client
 
+    this.status = new Resource75(uri + '/status', client)
+    this.records = new Resource76(uri + '/records', client)
   }
 
 
-  Resource74.prototype.patch = function (body, options) {
-    return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  Resource74.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource74.prototype.delete = function (body, options) {
+    return handleRequest(this._client, this._uri, 'DELETE', body, options)
   }
   function Resource75 (uri, client) {
     this._uri = uri
@@ -1155,9 +1158,6 @@
   }
 
 
-  Resource75.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
   Resource75.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
   }
@@ -1168,17 +1168,22 @@
   }
 
 
+  Resource76.prototype.patch = function (body, options) {
+    return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  }
   function Resource77 (uri, client) {
     this._uri = uri
     this._client = client
 
-    this.search = new Resource78(uri + '/search', client)
-    this.check = new Resource79(uri + '/check', client)
-    this.buy = new Resource80(uri + '/buy', client)
-    this.invoice = new Resource81(uri + '/invoice', client)
   }
 
 
+  Resource77.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource77.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
   function Resource78 (uri, client) {
     this._uri = uri
     this._client = client
@@ -1186,25 +1191,17 @@
   }
 
 
-  Resource78.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource78.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
-  }
   function Resource79 (uri, client) {
     this._uri = uri
     this._client = client
 
+    this.search = new Resource80(uri + '/search', client)
+    this.check = new Resource81(uri + '/check', client)
+    this.buy = new Resource82(uri + '/buy', client)
+    this.invoice = new Resource83(uri + '/invoice', client)
   }
 
 
-  Resource79.prototype.options = function (body, options) {
-    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
-  }
-  Resource79.prototype.post = function (body, options) {
-    return handleRequest(this._client, this._uri, 'POST', body, options)
-  }
   function Resource80 (uri, client) {
     this._uri = uri
     this._client = client
@@ -1229,6 +1226,32 @@
     return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
   }
   Resource81.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
+  }
+  function Resource82 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource82.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource82.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
+  }
+  function Resource83 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource83.prototype.options = function (body, options) {
+    return handleRequest(this._client, this._uri, 'OPTIONS', body, options)
+  }
+  Resource83.prototype.post = function (body, options) {
     return handleRequest(this._client, this._uri, 'POST', body, options)
   }
 

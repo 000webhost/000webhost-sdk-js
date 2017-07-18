@@ -2160,6 +2160,20 @@ Park a new domain
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.parked-domains.appName(appName).has-3rd-party
+
+```js
+var resource = client.resources.parked-domains.appName(appName).has-3rd-party;
+```
+
+##### GET
+
+Get if app uses 3rd party parked domain
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.parked-domains.domain_id(domain_id)
 
 * **domain_id** _string_
