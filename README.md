@@ -297,6 +297,20 @@ Marks given gamification step as completed
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).steps.survey
+
+```js
+var resource = client.resources.users.user_id(user_id).steps.survey;
+```
+
+##### PATCH
+
+Stores survey results and marks this gamification step completed
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id).async.messages
 
 ```js
