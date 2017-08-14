@@ -357,6 +357,28 @@ Set user complated async job as seen
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).zyroBuilder
+
+```js
+var resource = client.resources.users.user_id(user_id).zyroBuilder;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get user zyro builder usage
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.users.email-verify
 
 ```js
