@@ -114,7 +114,7 @@
     this.resendConfirmation = new Resource6(uri + '/resend-confirmation', client)
     this.steps = new Resource7(uri + '/steps', client)
     this.async = new Resource9(uri + '/async', client)
-    this.zyroBuilder = new Resource12(uri + '/zyroBuilder', client)
+    this.zyroBuilder = new Resource12(uri + '/zyro-builder', client)
   }
 
 

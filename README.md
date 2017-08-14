@@ -357,10 +357,10 @@ Set user complated async job as seen
 resource.patch().then(function (res) { ... });
 ```
 
-#### resources.users.user_id(user_id).zyroBuilder
+#### resources.users.user_id(user_id).zyro-builder
 
 ```js
-var resource = client.resources.users.user_id(user_id).zyroBuilder;
+var resource = client.resources.users.user_id(user_id).zyro-builder;
 ```
 
 ##### OPTIONS
