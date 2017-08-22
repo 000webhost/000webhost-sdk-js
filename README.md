@@ -2370,6 +2370,20 @@ Get invoice autologin URL
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.add-translation
+
+```js
+var resource = client.resources.add-translation;
+```
+
+##### PATCH
+
+Sends translations to REST
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 
 
 ### Custom Resources
