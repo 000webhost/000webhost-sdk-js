@@ -2144,6 +2144,20 @@ Trigger File Manager access Amplitude event
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).software
+
+```js
+var resource = client.resources.apps.app_id(app_id).software;
+```
+
+##### GET
+
+Get what software app uses
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
