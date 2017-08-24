@@ -303,9 +303,47 @@ resource.patch().then(function (res) { ... });
 var resource = client.resources.users.user_id(user_id).steps.survey;
 ```
 
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
 ##### PATCH
 
 Stores survey results and marks this gamification step completed
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).steps.review-link
+
+```js
+var resource = client.resources.users.user_id(user_id).steps.review-link;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get User Social review link
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+##### PATCH
+
+Submit social review link
 
 ```js
 resource.patch().then(function (res) { ... });
