@@ -417,6 +417,72 @@ Get user zyro builder usage
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).get-notifications
+
+```js
+var resource = client.resources.users.user_id(user_id).get-notifications;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get users notifications
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).update-show-notification
+
+```js
+var resource = client.resources.users.user_id(user_id).update-show-notification;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+update users notifications show flag
+
+```js
+resource.post().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).add-notification
+
+```js
+var resource = client.resources.users.user_id(user_id).add-notification;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+add new user notification
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.users.email-verify
 
 ```js
