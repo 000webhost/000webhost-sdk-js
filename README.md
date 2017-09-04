@@ -2262,6 +2262,28 @@ Get what software app uses
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.archived-apps
+
+```js
+var resource = client.resources.archived-apps;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of archived applications
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
