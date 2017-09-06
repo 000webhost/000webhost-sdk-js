@@ -319,6 +319,28 @@ Stores survey results and marks this gamification step completed
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).steps.survey-questions
+
+```js
+var resource = client.resources.users.user_id(user_id).steps.survey-questions;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get users survey questions
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id).steps.review-link
 
 ```js
