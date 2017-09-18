@@ -505,6 +505,28 @@ add new user notification
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).website-pauses
+
+```js
+var resource = client.resources.users.user_id(user_id).website-pauses;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Get all app pauses which belongs to user
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.users.email-verify
 
 ```js
@@ -2282,6 +2304,34 @@ Get what software app uses
 
 ```js
 resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).app-pause
+
+```js
+var resource = client.resources.apps.app_id(app_id).app-pause;
+```
+
+##### GET
+
+Get app daily sleeping info
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).update-app-pause
+
+```js
+var resource = client.resources.apps.app_id(app_id).update-app-pause;
+```
+
+##### PATCH
+
+Update app daily sleeping info
+
+```js
+resource.patch().then(function (res) { ... });
 ```
 
 #### resources.archived-apps
