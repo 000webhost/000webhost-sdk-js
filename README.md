@@ -519,12 +519,12 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-##### PATCH
+##### GET
 
 Get all app pauses which belongs to user
 
 ```js
-resource.patch().then(function (res) { ... });
+resource.get().then(function (res) { ... });
 ```
 
 #### resources.users.email-verify
