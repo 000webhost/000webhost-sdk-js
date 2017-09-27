@@ -1648,6 +1648,94 @@ Get bandwidth usage for application over time
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).statistics.top-statistics
+
+```js
+var resource = client.resources.apps.app_id(app_id).statistics.top-statistics;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get Disk Space Quota , Inode Usage Quota, Request per Minute statistics
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).statistics.more-statistics
+
+```js
+var resource = client.resources.apps.app_id(app_id).statistics.more-statistics;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get Bandwidth, Response codes , Request time, Sent emails statistics
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).statistics.sendmail
+
+```js
+var resource = client.resources.apps.app_id(app_id).statistics.sendmail;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get sendmail daily usage
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.apps.app_id(app_id).statistics.monthly-bandwidth
+
+```js
+var resource = client.resources.apps.app_id(app_id).statistics.monthly-bandwidth;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get bandwidth usage for application over time
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).backend
 
 ```js
