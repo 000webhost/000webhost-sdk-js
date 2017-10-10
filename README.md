@@ -527,6 +527,28 @@ Get all app pauses which belongs to user
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).phone-verified
+
+```js
+var resource = client.resources.users.user_id(user_id).phone-verified;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+User phone verified notification
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.users.email-verify
 
 ```js
