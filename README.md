@@ -527,6 +527,28 @@ Get all app pauses which belongs to user
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).next-temp-sleep
+
+```js
+var resource = client.resources.users.user_id(user_id).next-temp-sleep;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the data about next temporary sleeping website
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id).phone-verified
 
 ```js
