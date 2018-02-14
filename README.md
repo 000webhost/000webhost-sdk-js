@@ -1195,6 +1195,28 @@ resource.patch().then(function (res) { ... });
 
 ```
 
+#### resources.apps.app_id(app_id).repair
+
+```js
+var resource = client.resources.apps.app_id(app_id).repair;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Repair Website
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).files
 
 ```js
