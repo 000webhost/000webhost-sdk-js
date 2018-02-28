@@ -1217,6 +1217,28 @@ Repair Website
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).mining
+
+```js
+var resource = client.resources.apps.app_id(app_id).mining;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Change Mining Status
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).files
 
 ```js
