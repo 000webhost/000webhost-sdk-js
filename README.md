@@ -439,6 +439,28 @@ Get user zyro builder usage
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).get-global-notifications
+
+```js
+var resource = client.resources.users.user_id(user_id).get-global-notifications;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get user global notifications
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id).get-notifications
 
 ```js
