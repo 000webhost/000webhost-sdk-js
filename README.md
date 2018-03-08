@@ -461,6 +461,52 @@ Get user global notifications
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).global-notifications-click.notification(notification)
+
+* **notification** _string_
+
+```js
+var resource = client.resources.users.user_id(user_id).global-notifications-click.notification(notification);
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+User clicks on notification
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
+#### resources.users.user_id(user_id).global-notifications-all-read
+
+```js
+var resource = client.resources.users.user_id(user_id).global-notifications-all-read;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+User marks notifications as read
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id).get-notifications
 
 ```js
