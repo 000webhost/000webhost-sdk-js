@@ -461,12 +461,10 @@ Get user global notifications
 resource.get().then(function (res) { ... });
 ```
 
-#### resources.users.user_id(user_id).global-notifications-click.notification(notification)
-
-* **notification** _string_
+#### resources.users.user_id(user_id).global-notifications-click
 
 ```js
-var resource = client.resources.users.user_id(user_id).global-notifications-click.notification(notification);
+var resource = client.resources.users.user_id(user_id).global-notifications-click;
 ```
 
 ##### OPTIONS
@@ -483,6 +481,26 @@ User clicks on notification
 
 ```js
 resource.patch().then(function (res) { ... });
+```
+
+##### Body
+
+**application/json**
+
+```
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "required": true,
+  "properties": {
+    "notification": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
+
 ```
 
 #### resources.users.user_id(user_id).global-notifications-all-read
