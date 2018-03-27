@@ -2618,6 +2618,28 @@ Get the list of archived applications
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.hostinger-pricing
+
+```js
+var resource = client.resources.hostinger-pricing;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of hostinger prices and plan info
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
