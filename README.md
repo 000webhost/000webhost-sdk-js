@@ -2618,6 +2618,28 @@ Get the list of archived applications
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.premium-apps
+
+```js
+var resource = client.resources.premium-apps;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of premium user aps
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.hostinger-pricing
 
 ```js
