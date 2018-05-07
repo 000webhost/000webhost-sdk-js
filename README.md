@@ -1303,6 +1303,28 @@ Repair Website
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.apps.app_id(app_id).restore
+
+```js
+var resource = client.resources.apps.app_id(app_id).restore;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### PATCH
+
+Restore Website
+
+```js
+resource.patch().then(function (res) { ... });
+```
+
 #### resources.apps.app_id(app_id).mining
 
 ```js
