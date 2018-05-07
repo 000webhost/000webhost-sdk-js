@@ -777,6 +777,20 @@ Get upgrade to hostinger link
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.upgrade.trial
+
+```js
+var resource = client.resources.upgrade.trial;
+```
+
+##### GET
+
+Get if user is available for free trial
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.emailforwards
 
 ```js
