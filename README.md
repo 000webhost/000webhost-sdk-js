@@ -2676,6 +2676,28 @@ Get the list of premium user aps
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.premium-apps.autologin
+
+```js
+var resource = client.resources.premium-apps.autologin;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Get autologin link to premium app by invoice id
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.hostinger-pricing
 
 ```js
