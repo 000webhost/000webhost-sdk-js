@@ -70,6 +70,36 @@ client.options.baseUriParameters.version = 'v3';
 
 All methods return a HTTP request instance of [Popsicle](https://github.com/blakeembrey/popsicle), which allows the use of promises (and streaming in node).
 
+#### resources.users.goals.list
+
+```js
+var resource = client.resources.users.goals.list;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get users goal choices
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+##### POST
+
+Record users goal choice
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.users.user_id(user_id)
 
 * **user_id** _string_
