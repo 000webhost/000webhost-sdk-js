@@ -2990,6 +2990,20 @@ Sends translations to REST
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.store
+
+```js
+var resource = client.resources.store;
+```
+
+##### GET
+
+Get the list of referral store items
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 
 
 ### Custom Resources

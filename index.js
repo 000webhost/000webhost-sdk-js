@@ -90,6 +90,7 @@
     this.zyro = new Resource108(uri + '/zyro', client)
     this.domains = new Resource109(uri + '/domains', client)
     this.addTranslation = new Resource114(uri + '/add-translation', client)
+    this.store = new Resource115(uri + '/store', client)
   }
 
 
@@ -1672,6 +1673,16 @@
 
   Resource114.prototype.patch = function (body, options) {
     return handleRequest(this._client, this._uri, 'PATCH', body, options)
+  }
+  function Resource115 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource115.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
   }
 
   function CustomResource (uri, client) {
