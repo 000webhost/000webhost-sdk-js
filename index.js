@@ -1678,11 +1678,48 @@
     this._uri = uri
     this._client = client
 
+    this.announcements = new Resource116(uri + '/announcements', client)
+    this.latestAnnouncement = new Resource118(uri + '/latest-announcement', client)
   }
 
 
   Resource115.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  function Resource116 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+  Resource116.prototype.userId = function (/* ...args */) {
+    var uri = this._uri + template('/{0}', arguments, [undefined])
+
+    return new Resource117(uri, this._client)
+  }
+
+  Resource116.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
+  }
+  function Resource117 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource117.prototype.get = function (body, options) {
+    return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  function Resource118 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource118.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
 
   function CustomResource (uri, client) {

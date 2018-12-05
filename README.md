@@ -3004,6 +3004,50 @@ Get the list of referral store items
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.store.announcements
+
+```js
+var resource = client.resources.store.announcements;
+```
+
+##### POST
+
+Record if the user has seen the store announcement modal
+
+```js
+resource.post().then(function (res) { ... });
+```
+
+#### resources.store.announcements.user_id(user_id)
+
+* **user_id** _string_
+
+```js
+var resource = client.resources.store.announcements.user_id(user_id);
+```
+
+##### GET
+
+Get boolean if user has seen store announcement modal
+
+```js
+resource.get().then(function (res) { ... });
+```
+
+#### resources.store.latest-announcement
+
+```js
+var resource = client.resources.store.latest-announcement;
+```
+
+##### POST
+
+Record if the user has seen the latest store item announcement modal
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 
 
 ### Custom Resources
