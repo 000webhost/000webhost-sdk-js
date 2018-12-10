@@ -779,6 +779,28 @@ Set a new password using password reset token
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.users.social-login.unlink
+
+```js
+var resource = client.resources.users.social-login.unlink;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Unlink User from social login
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.nps
 
 ```js
