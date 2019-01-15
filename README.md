@@ -297,40 +297,10 @@ Resend email confirmation
 resource.post().then(function (res) { ... });
 ```
 
-#### resources.users.user_id(user_id).steps
+#### resources.users.user_id(user_id).survey
 
 ```js
-var resource = client.resources.users.user_id(user_id).steps;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### GET
-
-Get user gamification progress
-
-```js
-resource.get().then(function (res) { ... });
-```
-
-##### PATCH
-
-Marks given gamification step as completed
-
-```js
-resource.patch().then(function (res) { ... });
-```
-
-#### resources.users.user_id(user_id).steps.survey
-
-```js
-var resource = client.resources.users.user_id(user_id).steps.survey;
+var resource = client.resources.users.user_id(user_id).survey;
 ```
 
 ##### OPTIONS
@@ -343,16 +313,16 @@ resource.options().then(function (res) { ... });
 
 ##### PATCH
 
-Stores survey results and marks this gamification step completed
+Stores survey results.
 
 ```js
 resource.patch().then(function (res) { ... });
 ```
 
-#### resources.users.user_id(user_id).steps.survey-questions
+#### resources.users.user_id(user_id).survey-questions
 
 ```js
-var resource = client.resources.users.user_id(user_id).steps.survey-questions;
+var resource = client.resources.users.user_id(user_id).survey-questions;
 ```
 
 ##### OPTIONS
@@ -369,36 +339,6 @@ Get users survey questions
 
 ```js
 resource.get().then(function (res) { ... });
-```
-
-#### resources.users.user_id(user_id).steps.review-link
-
-```js
-var resource = client.resources.users.user_id(user_id).steps.review-link;
-```
-
-##### OPTIONS
-
-OAuth2 preflight check
-
-```js
-resource.options().then(function (res) { ... });
-```
-
-##### GET
-
-Get User Social review link
-
-```js
-resource.get().then(function (res) { ... });
-```
-
-##### PATCH
-
-Submit social review link
-
-```js
-resource.patch().then(function (res) { ... });
 ```
 
 #### resources.users.user_id(user_id).async.messages
