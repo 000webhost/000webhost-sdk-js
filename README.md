@@ -3010,6 +3010,20 @@ Record if the user has seen the latest store item announcement modal
 resource.post().then(function (res) { ... });
 ```
 
+#### resources.gamification
+
+```js
+var resource = client.resources.gamification;
+```
+
+##### GET
+
+Returns user active gamification tasks
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 
 
 ### Custom Resources
