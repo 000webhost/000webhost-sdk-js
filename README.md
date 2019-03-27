@@ -741,6 +741,20 @@ Unlink User from social login
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.onboarding
+
+```js
+var resource = client.resources.users.onboarding;
+```
+
+##### POST
+
+Stores onboarding answers
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.nps
 
 ```js
