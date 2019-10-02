@@ -2726,6 +2726,28 @@ Get the list of hostinger prices and plan info
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.hostinger-pricing-all
+
+```js
+var resource = client.resources.hostinger-pricing-all;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of all hostinger prices and plans info
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
