@@ -2638,6 +2638,28 @@ Update app daily sleeping info
 resource.patch().then(function (res) { ... });
 ```
 
+#### resources.apps.check-name
+
+```js
+var resource = client.resources.apps.check-name;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Validate email
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.archived-apps
 
 ```js
