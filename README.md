@@ -2770,6 +2770,28 @@ Get the list of all hostinger prices and plans info
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.hostinger-pricing-old-endpoint
+
+```js
+var resource = client.resources.hostinger-pricing-old-endpoint;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of all hostinger prices and plans info from old endpoint
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
