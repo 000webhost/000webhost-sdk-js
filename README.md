@@ -627,6 +627,28 @@ User phone verified notification
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.users.user_id(user_id).zyro
+
+```js
+var resource = client.resources.users.user_id(user_id).zyro;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### POST
+
+Get redirect link for Zyro user transfer
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 #### resources.users.email-verify
 
 ```js
@@ -2500,12 +2522,12 @@ OAuth2 preflight check
 resource.options().then(function (res) { ... });
 ```
 
-##### GET
+##### POST
 
 Get URL to Zyro application
 
 ```js
-resource.get().then(function (res) { ... });
+resource.post().then(function (res) { ... });
 ```
 
 #### resources.apps.app_id(app_id).logs
