@@ -2814,6 +2814,28 @@ Get the list of all hostinger prices and plans info from old endpoint
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.hostinger-pricing-hbilling
+
+```js
+var resource = client.resources.hostinger-pricing-hbilling;
+```
+
+##### OPTIONS
+
+OAuth2 preflight check
+
+```js
+resource.options().then(function (res) { ... });
+```
+
+##### GET
+
+Get the list of all hostinger prices and plans info from hBilling
+
+```js
+resource.get().then(function (res) { ... });
+```
+
 #### resources.types
 
 ```js
