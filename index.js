@@ -94,6 +94,7 @@
     this.addTranslation = new Resource119(uri + '/add-translation', client)
     this.store = new Resource120(uri + '/store', client)
     this.gamification = new Resource124(uri + '/gamification', client)
+    this.cart = new Resource125(uri + '/cart', client)
   }
 
 
@@ -1792,6 +1793,16 @@
 
   Resource124.prototype.get = function (body, options) {
     return handleRequest(this._client, this._uri, 'GET', body, options)
+  }
+  function Resource125 (uri, client) {
+    this._uri = uri
+    this._client = client
+
+  }
+
+
+  Resource125.prototype.post = function (body, options) {
+    return handleRequest(this._client, this._uri, 'POST', body, options)
   }
 
   function CustomResource (uri, client) {

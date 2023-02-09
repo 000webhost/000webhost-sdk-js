@@ -3148,6 +3148,20 @@ Returns user active gamification tasks
 resource.get().then(function (res) { ... });
 ```
 
+#### resources.cart
+
+```js
+var resource = client.resources.cart;
+```
+
+##### POST
+
+Gets Cart url
+
+```js
+resource.post().then(function (res) { ... });
+```
+
 
 
 ### Custom Resources
